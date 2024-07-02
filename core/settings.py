@@ -14,7 +14,7 @@ SECRET_KEY = "django-insecure-45v9x^cr3ndw-vxa&_fl2$f)o(0j_453%q+4$f=-(tctbsg7=g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -26,6 +26,10 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "crispy_forms",
+    "crispy_bootstrap5",
+    "users",
+    "tracker",
 ]
 
 MIDDLEWARE = [
@@ -43,7 +47,7 @@ ROOT_URLCONF = "core.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [os.path.join(BASE_DIR / "templates/")],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -104,9 +108,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = "static/"
+STATIC_URL = "/static/"
+STATICFILES_DIRS = [os.path.join(BASE_DIR / "assets/")]
+STATIC_ROOT = os.path.join(BASE_DIR / "static/")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# Crispy Constants
+CRISPY_TEMPLATE_PACK = "bootstrap5"

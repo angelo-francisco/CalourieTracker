@@ -1,0 +1,24 @@
+{% extends 'users/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block title %}LogIn - Calourie Tracker{% endblock%}
+
+{% block head %}
+<style> 
+form {
+    margin-top: 200px;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<form action="{% url 'login' %}" method="POST">
+    {% csrf_token %}
+    <div style="background-color: #17A3B8;padding: 5px;border-radius: 3px;">
+        <span style="font-size: 30px;color: white;font-weight: 600;">Entrar</span>
+    </div>
+    {{ form|crispy }}
+    <button class="btn btn-success">Entrar</button>
+</form>
+{% endblock %}
