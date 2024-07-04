@@ -17,7 +17,7 @@ def _signup(request):
             messages.add_message(request, messages.WARNING, "Username já existe !")
             return redirect(reverse("signup"))
 
-        if form.data["password1"] == form.data["password2"]:
+        if form.data["password1"] != form.data["password2"]:
             messages.add_message(request, messages.WARNING, "As senhas não coincidem!")
             return redirect(reverse("signup"))
 
