@@ -3,6 +3,8 @@
 ### About 📙
 We eat many times a day, so it is always necessary to check whether what we eat has enough calories to give us energy, and with Calorie Tracker this is possible.
 With our calorie tracker, you will have caloric information about the food you consume, also taking into account the amounts of protein, carbohydrates and fat, without forgetting the graphical demonstrations
+
+Based on: [django-calorie-tracker](https://github.com/nitish-gautam/django-calorie-tracker/)
 - Project preview
 <img src="../docs/imgs/preview.png">
 
