@@ -3,7 +3,6 @@ from django.contrib.auth.decorators import login_required
 from django.urls import reverse, reverse_lazy
 from .models import *
 from django.template.defaultfilters import floatformat
-from django.contrib.auth.models import User
 from django.db.models import Sum
 
 
@@ -44,6 +43,7 @@ def tracker(request):
         carbsP = float(floatformat((tot_carbs_formatted * 100)/tot_all, 2))
         protsP = float(floatformat((tot_prots_formatted * 100)/tot_all, 2))
         fatsP = float(floatformat((tot_fats_formatted * 100)/tot_all, 2)) 
+        
         return render(
             request,
             "tracker/tracker.html",

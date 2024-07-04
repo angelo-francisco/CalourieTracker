@@ -48,4 +48,4 @@ def _login(request):
 
 def _logout(request):
     logout(request)
-    return redirect(reverse('login'))
+    return redirect(reverse("login"))
