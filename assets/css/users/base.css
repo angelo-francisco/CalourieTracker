@@ -11,7 +11,7 @@ body {
 }
 
 form {
-    margin-top: 80px;
+    margin-top: 25px;
     width: 300px;
     display: flex;
     flex-direction: column;

@@ -1,0 +1,11 @@
+.food {
+    margin-top: 20px;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.food div {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
